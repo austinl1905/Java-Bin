@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-@SuppressWarnings ("unused")
 class myArrList {
   public static void main(String[] args) throws InterruptedException{
     ArrayList<String> myArr = new ArrayList<String>();
@@ -32,20 +31,20 @@ try {
 
   System.out.println("The ArrayList is " + myArr.get(0) + " " + myArr.get(1) + " " + myArr.get(2));
   Thread.sleep(1000);
-  
+
   obj4 = new Scanner(System.in);
   System.out.println("Enter a keyword in order to modify the array list. (Case sensitive)");
   System.out.println("Use keyword skip to end program.");
   System.out.println("Use keyword delete to remove a string.");
   System.out.println("Use keyword clear to remove all strings.");
-  
+
   String in4 = obj4.nextLine();
   in4.toLowerCase();
   switch (in4) {
     case "skip":
       System.out.println("Keyword received. Now closing program.");
       break;
-      
+
     case "delete":
       obj5 = new Scanner(System.in);
       System.out.println("Enter the number of the string you want to delete (List starts from 0)");
@@ -53,7 +52,7 @@ try {
       myArr.remove(in5);
       System.out.print("The array is now ");
       System.out.println(myArr);
-      
+
       obj6 = new Scanner(System.in);
       System.out.println("Enter delete again if you want to delete another string");
       String in6 = obj6.nextLine();
@@ -67,15 +66,15 @@ try {
       System.out.print("The array is now ");
       System.out.println(myArr);
       break;
-      
+
     case "clear":
       System.out.println("Now clearing array.");
       myArr.clear();
       break;
-      
+
     default:
       System.out.println("Invalid keyword");
-    
+
   }
   obj5.close();
   obj6.close();
@@ -93,7 +92,7 @@ finally {
 
   System.out.println("Program concluded");
 }
-    
-    
+
+
   }
 }
